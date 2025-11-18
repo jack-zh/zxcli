@@ -16,7 +16,7 @@
 #endif
 
 #define YY_NO_UNPUT
-#define YY_INPUT(buf, result, max_size)  yy_input(buf, &result, max_size)
+#define YY_INPUT(buf, result, max_size)  do { yy_size_t yy_size = 0; yy_input(buf, &yy_size, max_size); result = (int)yy_size; } while(0)
 
 /* Function declarations */
 extern int find_token(char *input);
