@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <string.h>
 #include "rpc_cli.h"
+
+/* Function declarations */
+extern int yylex(void);
+extern void clear_name_table(void);
+extern int hy_switch_to_file(FILE* fp);
+extern char *add_name_table(char *name);
+
 #define printPrompt()   
 
 static int EN = 0;

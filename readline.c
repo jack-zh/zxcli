@@ -6,7 +6,10 @@
 #include <readline/history.h>
 #include <unistd.h>
 
-void yy_input(char *buf, int *result, int max_size)
+/* Define yy_size_t for flex compatibility */
+typedef size_t yy_size_t;
+
+void yy_input(char *buf, yy_size_t *result, int max_size)
 {
     if(isatty(0)) {
         char *s = NULL;            

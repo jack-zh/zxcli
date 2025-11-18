@@ -14,7 +14,7 @@ $(all):parser.c lexer.c $(objs)
 
 %.c: %.y
 	$(YACC) $^
-	$(Q)mv parser.tab.c $@
+	mv parser.tab.c parser.c
 
 clean:
 	$(RM) lexer.c parser.c
@@ -22,4 +22,4 @@ clean:
 	$(RM) $(all)
 	$(RM) parser.out* 
 	$(RM) parser.t*
-	$(RM) *~ 
+	$(RM) *~

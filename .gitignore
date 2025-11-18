@@ -1,0 +1,39 @@
+# Build artifacts
+*.o
+*.a
+*.so
+cli
+
+# Generated files by Flex/Bison
+lexer.c
+parser.c
+parser.tab.h
+parser.output
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# Dependency files
+*.d
+
+# Core dumps
+core
+core.*
+
+# Temporary files
+*.tmp
+*.temp

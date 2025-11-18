@@ -16,7 +16,12 @@
 #endif
 
 #define YY_NO_UNPUT
-#define YY_INPUT(buf, result, max_size)  yy_input(buf, &result, max_size) 
+#define YY_INPUT(buf, result, max_size)  yy_input(buf, &result, max_size)
+
+/* Function declarations */
+extern int find_token(char *input);
+extern int yy_input(char *buf, yy_size_t *result, int max_size);
+extern char *add_name_table(char *name); 
 
 #define MAXNAMES 64
 #define MAXWORDLEN  32
@@ -24,7 +29,7 @@
     static char g_name[MAXNAMES][MAXWORDLEN];
     static int  g_nameindex = 0;
     static char *g_command = 0;
-    static char *add_name_table(char *name)
+    char *add_name_table(char *name)
     {
         if (g_nameindex < MAXNAMES)
         {
